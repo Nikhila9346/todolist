@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <h1>{{data.name}}</h1>
+        <h3>{{data.desc}}</h3>
+        <br>
+        <br>
+    <a href="{% url 'home' %}"><button>Back</button></a>
+{% endblock content %}

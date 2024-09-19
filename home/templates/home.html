@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1 style="color: darkblue; display: flex; text-align: center; justify-content: center;">TO-DO LIST</h1> 
+    <br><br>
+
+    {% include 'form.html' %}
+    {% for d in data %}
+        <a href="{% url 'details' d.id %}"><h3>{{d.name}}</h3></a>
+        <br>
+        <button><a href="{% url 'edit' d.id %}">Edit</a></button>
+        <button><a href="{% url 'delete' d.id %}">Delete</a></button>
+    {% endfor %}
+{% endblock content %}
